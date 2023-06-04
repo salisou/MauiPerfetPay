@@ -1,0 +1,57 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiPerfetPay"
+             x:Class="MauiPerfetPay.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <Color x:Key="SectionsColor">#444444</Color>
+            <Color x:Key="LightFont">#d6d6d6</Color>
+            <Color x:Key="DarkFont">#4fbBeb</Color>
+
+            <Style x:Key="lblTotalP" TargetType="Label">
+                <Setter Property="Grid.ColumnSpan" Value="3"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="Text" Value="TOTAL P/PERSON"/>
+                <Setter Property="TextColor" Value="{StaticResource DarkFont}"/>
+            </Style>
+
+            <Style x:Key="lblTotal" TargetType="Label">
+                <Setter Property="Grid.Row" Value="1"/>
+                <Setter Property="Text" Value="$0.00"/>
+                <Setter Property="FontSize" Value="35"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="TextColor" Value="{StaticResource LightFont}"/>
+            </Style>
+
+            <Style x:Name="boxSeparator" TargetType="BoxView">
+                <Setter Property="Grid.Row" Value="1"/>
+                <Setter Property="Grid.Column" Value="1"/>
+                <Setter Property="Color" Value="#adadad"/>
+                <Setter Property="Margin" Value="0,10,0,0"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+
+            <Style x:Key="vStackLayout" TargetType="VerticalStackLayout">
+                <Setter Property="Grid.Row" Value="1"/>
+                <Setter Property="Grid.Column" Value="2"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
+
+            <Style x:Name="Total" TargetType="Label">
+                <Setter Property="Text" Value="SUBTOTAL"/>
+                <Setter Property="TextColor" Value="{StaticResource LightFont}"/>
+            </Style>
+        </ResourceDictionary>
+
+
+    </Application.Resources>
+</Application>
